@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Django Calculator</title>
+</head>
+
+<body>
+
+    <h1>Simple Django Calculator</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>First Number:</label>
+        <input type="number" step="any" name="num1" required>
+
+        <br><br>
+
+        <label>Operator:</label>
+
+        <select name="operator">
+            <option value="+">Addition (+)</option>
+            <option value="-">Subtraction (-)</option>
+            <option value="*">Multiplication (*)</option>
+            <option value="/">Division (/)</option>
+        </select>
+
+        <br><br>
+
+        <label>Second Number:</label>
+        <input type="number" step="any" name="num2" required>
+
+        <br><br>
+
+        <button type="submit">Calculate</button>
+
+    </form>
+
+    {% if result is not None %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+
+</body>
+</html>
