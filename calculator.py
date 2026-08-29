@@ -1,4 +1,5 @@
-'''https://github.com/bhargavavula09-star/caluclator.git'''
+"""https://github.com/bhargavavula09-star/caluclator.git"""
+
 num1 = float(input("Enter first number: "))
 operator = input("Enter operator (+, -, *, /): ")
 num2 = float(input("Enter second number: "))
